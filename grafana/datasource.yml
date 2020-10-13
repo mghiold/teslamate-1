@@ -18,3 +18,19 @@ datasources:
     sslmode: disable
   version: 1
   editable: true
+- name: solardb
+  type: influxdb
+  url: $SOLAR_DATABASE_HOST:$SOLAR_DATABASE_PORT
+  user: $SOLAR_DATABASE_USER
+  database: $SOLAR_DATABASE_NAME
+  password: ""
+  access: proxy
+  basicAuth: false
+  withCredentials: false
+  isDefault: true
+  secureJsonData:
+    password: $DATABASE_PASS
+  jsonData:
+    httpMode: POST
+  version: 1
+  editable: true
