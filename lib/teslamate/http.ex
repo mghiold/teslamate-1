@@ -9,10 +9,22 @@ defmodule TeslaMate.HTTP do
              [
                name: __MODULE__,
                pools: %{
-                 :default => [size: 5],
-                 "https://owner-api.teslamotors.com" => [size: 10],
-                 "https://nominatim.openstreetmap.org" => [size: 3],
-                 "https://api.github.com" => [size: 1]
+                 :default => [
+                   size: 5,
+                   conn_opts: [transport_opts: [inet6: true]]
+                 ],
+                 "https://owner-api.teslamotors.com" => [
+                   size: 10,
+                   conn_opts: [transport_opts: [inet6: true]]
+                 ],
+                 "https://nominatim.openstreetmap.org" => [
+                   size: 3,
+                   conn_opts: [transport_opts: [inet6: true]]
+                 ],
+                 "https://api.github.com" => [
+                   size: 1,
+                   conn_opts: [transport_opts: [inet6: true]]
+                 ]
                }
              ],
              arg
