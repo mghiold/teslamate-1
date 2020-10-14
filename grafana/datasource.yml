@@ -27,7 +27,7 @@ datasources:
   access: proxy
   basicAuth: false
   withCredentials: false
-  isDefault: true
+  isDefault: false
   secureJsonData:
     password: $DATABASE_PASS
   jsonData:

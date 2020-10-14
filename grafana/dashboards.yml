@@ -31,10 +31,10 @@ providers:
   updateIntervalSeconds: 86400
   options:
     path: /dashboards_reports
-- name: 'solar'
+- name: 'solar_reports'
   orgId: 1
   folder: Solar
-  folderUid: Nr6ofiDZk
+  folderUid: Nr7ofiDZk
   type: file
   disableDeletion: false
   editable: true
